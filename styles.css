@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+
+.popup-content img {
+    width: 40%; /* Adjust the width of the image */
+    max-height: 200px; /* Set a maximum height for the image */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto 20px; /* Center the image horizontally and add some bottom margin */
+}
+
+#date {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    position: relative;
+    bottom: -70px; /* Adjust as needed */
+    text-transform: lowercase;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-family: 'Protest Strike', sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: medium;
+    color:black;
+}
+
+.word {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #EFEFE6;
+    color:black;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    width: 100px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    line-height: 40px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+}
+
+.word:hover {
+    background-color: #5a594e;
+    color:#fff;
+}
+
+button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: small;
+    background-color: #fff;
+    color: black;
+    border: 0.06cm solid black;
+    border-radius: 2em;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 1.2em 4em;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+button:hover {
+    background-color:grey;
+    color:#fff;
+}
+
+.word.selected {
+    background-color: #5a594e;
+    color:#fff;
+}
+
+.popup {
+    display: none; /* Hide popup by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(179, 167, 254);
+    transition: top 0.7s ease;
+    z-index: 9999; /* Ensure it's above other content */
+}
+
+.popup.top {
+    top: -100%; /* New position after transition */
+}
+
+.popup-content {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.popup-content h1 {
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.popup-content h6 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    position: relative;
+    bottom: -40px; /* Adjust as needed */
+}
+
+.popup-content button {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: small;
+    background-color: black;
+    color: white;
+    border: 0.06cm solid black;
+    border-radius: 2em;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 1.2em 4em;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.small-popup {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    display: none; /* Hide popup by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(179, 167, 254);
+    z-index: 9999; /* Ensure it's above other content */
+}
+
+.small-popup-content {
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fail-popup-content {
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.small-popup-content h1 {
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+}
+
+.small-popup.show {
+    display: block;
+    opacity: 1; /* Show the popup by setting opacity to 1 */
+}
+
+.trial-count {
+    position: fixed;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.mistakes-remaining {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: small;
+    position: relative;
+    top: -240px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(90, 89, 78);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    top: -240px;
+}
+
+.buttons {
+    position: fixed;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.result {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    position: fixed;
+    bottom: 130px; /* Adjust the distance from the buttons */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.correct {
+    background-color: lightgrey;
+    cursor: default;
+}

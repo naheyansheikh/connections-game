@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connections Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <img src="images/connections.png" alt="Connections Image">
+            <h1>connections</h1>
+            <p>group words that share<br>a common thread.</p>
+            <button id="playButton" class="button">play</button>
+            <p id="date"></p> <!-- Placeholder for the date -->
+            <h6>by Naheyan Sheikh<h6>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title">create four groups of four!</h1>
+        <div class="connection">
+            <div class="word" id="word1">cat</div>
+            <div class="word" id="word2">tail</div>
+            <div class="word" id="word3">paws</div>
+            <div class="word" id="word4">meow</div>
+        </div>
+        <div class="connection">
+            <div class="word" id="word5">red</div>
+            <div class="word" id="word6">blue</div>
+            <div class="word" id="word7">green</div>
+            <div class="word" id="word8">orange</div>
+        </div>
+        <div class="connection">
+            <div class="word" id="word9">addition</div>
+            <div class="word" id="word10">subtraction</div>
+            <div class="word" id="word11">division</div>
+            <div class="word" id="word12">multiplication</div>
+        </div>
+        <div class="connection">
+            <div class="word" id="word13">hydrogen</div>
+            <div class="word" id="word14">helium</div>
+            <div class="word" id="word15">oxygen</div>
+            <div class="word" id="word16">nitrogen</div>
+        </div>
+    </div>
+    <div class="trial-count">
+        <span class="mistakes-remaining">mistakes remaining:</span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="buttons">
+        <button id="randomizeButton" class="button">shuffle</button>
+        <button id="checkButton">submit</button>
+    </div>
+    <div id="result" class="result"></div>
+    <div id="smallPopup" class="small-popup">
+        <div class="small-popup-content">
+            <h1>good job!</h1>
+            <p>you've successfully grouped all the words.</p>
+        </div>
+    </div>
+    <div id="failPopup" class="small-popup">
+        <div class="fail-popup-content">
+            <h1>next time :(</h1>
+            <p>you ran out of mistakes.</p>
+        </div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
