@@ -16,6 +16,6 @@ This project serves as a learning journey for me, the developer. Through buildin
 To try out the New York Times Connection Game Remake, follow these steps:
 
 Clone the Repository: Clone this repository to your local machine using Git:
-git clone https://github.com/your-username/nyt-connection-game.git
+git clone https://github.com/naheyansheikh/connections-game.git
 Open the Game: Navigate to the project directory and open the index.html file in your preferred web browser.
 Start Playing: Once the game loads, dive into the puzzles and start making connections!
